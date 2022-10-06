@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FD4DE7028E9ECDA00CCF869 /* ViewController+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4DE6F28E9ECDA00CCF869 /* ViewController+Helpers.swift */; };
+		8FD4DE7228EC385A00CCF869 /* Inspection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD4DE7128EC385A00CCF869 /* Inspection.swift */; };
 		8FDAA80F28C7AFE9003818B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAA80E28C7AFE9003818B3 /* AppDelegate.swift */; };
 		8FDAA81128C7AFE9003818B3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAA81028C7AFE9003818B3 /* SceneDelegate.swift */; };
 		8FDAA81328C7AFE9003818B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAA81228C7AFE9003818B3 /* ViewController.swift */; };
 		8FDAA81628C7AFE9003818B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FDAA81428C7AFE9003818B3 /* Main.storyboard */; };
 		8FDAA81828C7AFEC003818B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FDAA81728C7AFEC003818B3 /* Assets.xcassets */; };
 		8FDAA81B28C7AFEC003818B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FDAA81928C7AFEC003818B3 /* LaunchScreen.storyboard */; };
+		8FDAA82428C7B17B003818B3 /* RClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAA82328C7B17B003818B3 /* RClass.m */; };
+		8FDAA82728C7B422003818B3 /* NSObject+UClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FDAA82628C7B422003818B3 /* NSObject+UClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FD4DE6F28E9ECDA00CCF869 /* ViewController+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Helpers.swift"; sourceTree = "<group>"; };
+		8FD4DE7128EC385A00CCF869 /* Inspection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inspection.swift; sourceTree = "<group>"; };
 		8FDAA80B28C7AFE9003818B3 /* RuntimeC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FDAA80E28C7AFE9003818B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FDAA81028C7AFE9003818B3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +30,11 @@
 		8FDAA81728C7AFEC003818B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FDAA81A28C7AFEC003818B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FDAA81C28C7AFEC003818B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FDAA82228C7B17B003818B3 /* RuntimeC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeC-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FDAA82328C7B17B003818B3 /* RClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RClass.m; sourceTree = "<group>"; };
+		8FDAA82528C7B422003818B3 /* NSObject+UClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+UClass.h"; sourceTree = "<group>"; };
+		8FDAA82628C7B422003818B3 /* NSObject+UClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UClass.m"; sourceTree = "<group>"; };
+		8FDAA82928C7B4DB003818B3 /* RClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RClass.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,13 @@
 				8FDAA81728C7AFEC003818B3 /* Assets.xcassets */,
 				8FDAA81928C7AFEC003818B3 /* LaunchScreen.storyboard */,
 				8FDAA81C28C7AFEC003818B3 /* Info.plist */,
+				8FDAA82328C7B17B003818B3 /* RClass.m */,
+				8FDAA82928C7B4DB003818B3 /* RClass.h */,
+				8FDAA82228C7B17B003818B3 /* RuntimeC-Bridging-Header.h */,
+				8FDAA82528C7B422003818B3 /* NSObject+UClass.h */,
+				8FDAA82628C7B422003818B3 /* NSObject+UClass.m */,
+				8FD4DE6F28E9ECDA00CCF869 /* ViewController+Helpers.swift */,
+				8FD4DE7128EC385A00CCF869 /* Inspection.swift */,
 			);
 			path = RuntimeC;
 			sourceTree = "<group>";
@@ -99,6 +117,7 @@
 				TargetAttributes = {
 					8FDAA80A28C7AFE9003818B3 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 				};
 			};
@@ -141,6 +160,10 @@
 				8FDAA81328C7AFE9003818B3 /* ViewController.swift in Sources */,
 				8FDAA80F28C7AFE9003818B3 /* AppDelegate.swift in Sources */,
 				8FDAA81128C7AFE9003818B3 /* SceneDelegate.swift in Sources */,
+				8FD4DE7228EC385A00CCF869 /* Inspection.swift in Sources */,
+				8FDAA82428C7B17B003818B3 /* RClass.m in Sources */,
+				8FD4DE7028E9ECDA00CCF869 /* ViewController+Helpers.swift in Sources */,
+				8FDAA82728C7B422003818B3 /* NSObject+UClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -302,6 +326,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tst.tst.RuntimeC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeC/RuntimeC-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -312,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -329,6 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = tst.tst.RuntimeC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeC/RuntimeC-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
