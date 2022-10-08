@@ -10,8 +10,6 @@
 
 @implementation Image
 
-@synthesize obj = _obj;
-
 - (instancetype)init
 {
     self = [super init];
@@ -70,8 +68,8 @@ static NSInteger _userCount = 0;
     return cat;
 }
 
-+ (NSString *)getAdditionalData {
-    return @"data and pancakes ";
++ (BOOL) isInLoveWithBoxes {
+    return TRUE;
 }
 
 @end

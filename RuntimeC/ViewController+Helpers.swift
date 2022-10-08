@@ -74,7 +74,7 @@ extension ViewController {
         let planeMaterial = SCNMaterial()
         planeMaterial.emission.contents = image
         planeMaterial.isDoubleSided = true
-        let sphereGeometry = SCNSphere(radius: 1)
+        let sphereGeometry = SCNSphere(radius: 0.8)
         sphereGeometry.materials = [planeMaterial]
         self.sphereNode = SCNNode(geometry: sphereGeometry)
         

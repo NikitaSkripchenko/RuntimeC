@@ -53,7 +53,7 @@ class ViewController: UIViewController {
                     let currectClass = type(of: object)
 //                    let ivarName = "_name"
                     let imagePropertyName = "image"
-                    let funName = "getAdditionalData"
+                    let funName = "isInLoveWithBoxes"
                     
                     
                     inspect(sampleClass)
@@ -94,33 +94,36 @@ class ViewController: UIViewController {
                                     let methodImplementation = class_getMethodImplementation(sampleClass, getter)
                                     let getterSignature = (@convention(c)(NSObject?, Selector) -> Any).self
                                     let getterMethod = unsafeBitCast(methodImplementation, to: getterSignature)
-
+                                    
                                     
                                     
                                     
                                     // MARK: Swizzling
-                                    // getData invokation
                                     let getDataSelector = NSSelectorFromString(funName)
                                     let getDataMethod = ObjectiveC.class_getClassMethod(sampleClass, getDataSelector)!
                                     let getDataImp = method_getImplementation(getDataMethod)
                                     
-                                    // swizzling helper
-                                    let f: (NSObject?, Selector) -> Any = {ns, sel in
-                                        let val = unsafeBitCast(getDataImp, to: getterSignature)(classNSObject, getDataSelector)
-                                        return "\(val)and catssss"
-                                    }
+                                    //before swizzling
+                                    let getterSignature_ = (@convention(c)(NSObject?, Selector) -> Bool).self
+                                    print(unsafeBitCast(getDataImp, to: getterSignature_)(classNSObject, getDataSelector))
+
 
                                     //new implementation
+                                    let f: (NSObject?, Selector) -> Any = {_, _ in
+                                        return "falsyfalse"
+                                    }
                                     let myIMP = imp_implementationWithBlock(
                                         unsafeBitCast(
                                             f as (@convention(block) (NSObject?, Selector) -> Any),
                                             to: AnyObject.self
                                         )
                                     )
-                                    // swizzle
-                                    method_setImplementation(getDataMethod, myIMP)
                                     
+                                    // swizzle occurs here
+                                    method_setImplementation(getDataMethod, myIMP)
+
                                     let getterMethodS = unsafeBitCast(myIMP, to: getterSignature)
+                                    // after swizzling
                                     print(getterMethodS(classNSObject, getDataSelector))
                                     // MARK: swizzling end
                                     
@@ -157,7 +160,6 @@ class ViewController: UIViewController {
                                 }
                             }
                             free(typeNameCString)
-                            print(typeName)
                         }
                     }
                 }

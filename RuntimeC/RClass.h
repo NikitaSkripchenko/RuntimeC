@@ -12,7 +12,6 @@
 {
     NSURL *imageURL;
 }
-@property NSObject* obj;
 @end
 
 @interface CatInBox : NSObject
@@ -26,7 +25,7 @@
 @property Image* image;
 + (void)resetIdentifier;
 + (CatInBox *)getUser;
-+ (NSString *) getAdditionalData;
++ (BOOL) isInLoveWithBoxes;
 
 @end
 
